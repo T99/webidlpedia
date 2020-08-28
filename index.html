@@ -1,22 +1,38 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset=utf-8>
-    <title>WebIDLPedia</title>
+    <meta charset="utf-8">
+    <title>Graphical representation of interface inheritance</title>
+    <script src="https://d3js.org/d3.v2.js?2.9.3"></script>
+
     <style>
-      ol { list-style: none;}
-      nav ul { display: flex; list-style: none; flex-flow: row; justify-content: space-around;}
-      nav ul li { flex: none; margin: auto;}
+	
+	.node {
+		cursor: pointer;
+	}
+
+	.node circle {
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 3px;
+	}
+
+	.node text {
+	  font: 12px sans-serif;
+	}
+
+	.link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 2px;
+	}
+	
     </style>
-  </head>
+    </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="?">List of referenceable IDL names</a></li>
-        <li><a href="?enums=">List of strings used in enums</a></li>
-        <li><a href="?members=">List of names for attributes/members/methods</a></li>
-        <li><a href="?extattr=">Extended attributes usage</a></li>
-    </nav>
+    <h1>Graphical representation of interfaces inheritance</h1>
+    <script src="inheritance.js">
+    </script>
   </body>
-  <script src="pedia.js"></script>
 </html>
+
